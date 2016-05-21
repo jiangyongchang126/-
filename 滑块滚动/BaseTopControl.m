@@ -20,6 +20,8 @@
         _squreView.backgroundColor =[UIColor blueColor];
         [self addSubview:_squreView];
         
+        self.count = titles.count;
+        
         NSMutableArray *btns = [NSMutableArray array];
         for (int i = 0; i < titles.count; i++) {
             
@@ -43,7 +45,7 @@
 #pragma mark - action
 - (void)selectAction:(UIButton *)btn
 {
-    for (int i = 1; i < 4; i++) {
+    for (int i = 1; i < self.count+1; i++) {
         
         UIButton *botton = (UIButton *)[self viewWithTag:i];
         botton.selected = NO;

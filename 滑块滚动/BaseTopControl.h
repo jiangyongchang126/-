@@ -19,6 +19,7 @@
 
 @property (copy, nonatomic) void (^SelectBlock)(NSInteger);
 @property (assign, nonatomic) NSInteger selectIndex;
+@property (assign, nonatomic) NSInteger count;
 
 - (instancetype)initWithTitles:(NSArray *)titles;
 

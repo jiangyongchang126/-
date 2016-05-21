@@ -1,0 +1,54 @@
+
+#ifndef XAExchange_Prefix_pch
+#define XAExchange_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define IOS8_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"8.0"] != NSOrderedAscending )
+#define IOS7_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"7.0"] != NSOrderedAscending )
+#define IOS6_OR_LATER	( [[[UIDevice currentDevice] systemVersion] compare:@"6.0"] != NSOrderedAscending )
+
+#define kNavHeight  (IOS7_OR_LATER ? 64 : 44)
+#define kStatusBarHeight (IOS7_OR_LATER ? 0 : 20)
+#define kWindowHeight   ([UIScreen mainScreen].bounds.size.height - kStatusBarHeight)     //视图高度
+#define kWindowWidth   [UIScreen mainScreen].bounds.size.width     //视图宽度
+
+#define kHiddenMessageBtn   NO
+#define kBottomViewHeight   39
+#define kBottomFont [UIFont boldSystemFontOfSize:16]
+
+//颜色创建
+#undef  RGBCOLOR
+#define RGBCOLOR(r,g,b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+#undef  RGBACOLOR
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+
+#undef	HEX_RGB
+#define HEX_RGB(V)		[UIColor colorWithRGBHex:V]
+
+
+//#ifdef DEBUG
+//static const int ddLogLevel = DDLogLevelVerbose;
+//#else
+//static const int ddLogLevel = DDLogLevelOff;
+//#endif
+
+#define dFlagBlue       0x5c95e2
+#define dFlagBlueDark   0x2a5faf
+#define dFlagWhite      0xffffff
+#define dFlagBG         0Xf0eff5
+#define dFlagOrange     0xff761d
+#define dFlagYellow     0xffa42d
+#define dFlagGray       0xa1a1a1
+#define dFlagGrayLine   0xe4e4e4
+#define dFlagGrayDark   0x666666
+#define dFlagBlack      0x414141
+#define dFlagGreen      0x87e048
+#define dFlagRed        0xff571c
+#define dFlagGreenTP    0x2abfa4
+
+
+
+#endif

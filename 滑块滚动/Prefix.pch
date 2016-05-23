@@ -29,6 +29,13 @@
 #define HEX_RGB(V)		[UIColor colorWithRGBHex:V]
 
 
+#import "Singleton.h"
+#import "UIView+Masonry_LJC.h"
+#import "Masonry.h"
+#import "NSObject+Value.h"
+#import "MBProgressHUD.h"
+#import "MJRefresh.h"
+
 //#ifdef DEBUG
 //static const int ddLogLevel = DDLogLevelVerbose;
 //#else
